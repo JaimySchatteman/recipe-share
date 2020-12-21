@@ -1,20 +1,23 @@
 <template>
-  <div class="w-full h-screen grid grid-cols-3 gap-16 px-16 mt-12">
-    <router-link v-for="recipe in recipes" :key="recipe.id" :to="{name: 'detail', params: {uid: recipe.uid}}" tag="div">
-      <img :src="recipe.data.image.url" :alt="recipe.data.image.alt" class="w-full">
-      <div class="">
-        <h1>{{ recipe.data.name[0].text }}</h1>
-
-      </div>
-
-    </router-link>
+  <div class="w-full px-8 lg:px-12 xl:px-16 mt-16">
+    <div class="flex ml-4 text-3xl">
+      <img src="../assets/images/recipe-book.svg" alt="favorite-recipes" class="w-10 lg:w14">
+      <h1 class="ml-4">My Favorite Recipes</h1>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 lg:gap-12 xl:gap-16 2xl:gap-24 mt-8">
+      <recipes-card v-for="recipe in recipes" :key="recipe.id" :recipe="recipe"/>
+    </div>
   </div>
 </template>
 
 <script>
+import RecipesCard from "@/components/RecipesCard";
 
 export default {
   name: "Recipes",
+  components: {
+    RecipesCard
+  },
   data: function () {
     return {
       recipes: []
@@ -41,5 +44,10 @@ export default {
 </script>
 
 <style scoped>
+h1 {
+  font-weight: 700;
+  color: #165412;
+
+}
 
 </style>
