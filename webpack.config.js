@@ -6,6 +6,7 @@ module.exports = {
         new GoogleFontsPlugin({
             fonts: [
                 { family: "Source Sans Pro" },
+                { family: "Source Serif Pro" },
                 { family: "Roboto", variants: [ "400", "700italic" ] }
             ]
         })

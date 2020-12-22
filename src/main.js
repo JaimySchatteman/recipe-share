@@ -3,24 +3,32 @@ import App from './App.vue'
 
 import '@/assets/css/tailwind.css'
 
+
 import VueRouter from 'vue-router'
 import { routes } from './routes/routes'
 
-import PrismicVue from 'prismic-vue'
-
-Vue.config.productionTip = false
+const router = new VueRouter({
+  routes,
+  mode: 'history'
+});
 
 Vue.use(VueRouter);
+
+
+
+import PrismicVue from 'prismic-vue'
 
 Vue.use(PrismicVue, {
   endpoint: 'https://recipe-share.cdn.prismic.io/api/v2'
 
 });
 
-const router = new VueRouter({
-  routes,
-  mode: 'history'
-});
+const EventBus = new Vue();
+export default EventBus;
+
+
+
+Vue.config.productionTip = false
 
 new Vue({
   router,

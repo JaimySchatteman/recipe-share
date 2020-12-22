@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full px-8 lg:px-12 xl:px-16 mt-16">
+  <div class="w-full px-8 lg:px-12 xl:px-16 mt-16 mb-16">
     <div class="flex ml-4 text-3xl">
       <img src="../assets/images/recipe-book.svg" alt="favorite-recipes" class="w-10 lg:w14">
       <h1 class="ml-4">My Favorite Recipes</h1>
@@ -44,6 +44,8 @@ export default {
 </script>
 
 <style scoped>
+
+
 h1 {
   font-weight: 700;
   color: #165412;
