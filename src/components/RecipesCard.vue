@@ -30,21 +30,16 @@ img {
 }
 
 div.recipe-card {
-  background-color: #fff;
   border-radius: 1.5rem;
   z-index: 9;
 }
 
 div.recipe-card {
-  box-shadow: 2px 2px 15px rgba(50, 50, 0, 0.10);
-
+  box-shadow: 2px 2px 18px rgba(30, 30, 0, 0.25);
 }
 
 div.recipe-card:hover {
-  box-shadow: 2px 2px 22px rgba(50, 50, 0, 0.15);
-
+  box-shadow: 2px 2px 22px rgba(70, 70, 0, 0.40);
 }
-
-
 
 </style>

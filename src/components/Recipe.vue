@@ -165,7 +165,7 @@ li span.ingredient {
 .recipe-information {
   border-radius: 1.75rem;
   z-index: 20;
-  background-color: #edffeb;
+  background-color: #fff;
   box-shadow: 5px 5px 20px rgba(50, 50, 0, 0.1);
 }
 

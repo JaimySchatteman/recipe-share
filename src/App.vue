@@ -20,7 +20,7 @@ export default {
 
 <style>
 html {
-  background-color: #F2FFEC;
+  background-color: #fff;
 
 }
 
@@ -28,7 +28,6 @@ html {
   font-family: "Source Sans Pro", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #F2FFEC;
 
 }
 
