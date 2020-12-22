@@ -1,5 +1,5 @@
 <template>
-  <div v-if="recipe != null" class="recipe flex flex-col mb-12" :style="cssVars">
+  <div v-if="recipe != null" class="recipe flex flex-col" :style="cssVars">
     <img :src="recipe.data.image.url" :alt="recipe.data.image.alt" class="background-image h-full">
     <div class="recipe-information -mt-8 md:-mt-16 lg:-mt-20 xl:-mt-32 mx-8 md:mx-16 lg:mx-24 xl:mx-42 2xl:mx-60 px-8 sm:px-12 py-10">
         <h1 class="text-4xl">{{ recipe.data.name[0].text }}</h1>
@@ -30,9 +30,9 @@
               <h2>Ingredients</h2>
               <ul>
                 <li v-for="(ingredient, index) in recipe.data['recipe-ingredients']" :key="index" class="py-2">
-                  <span>{{  ingredient.ingredients.data.quantity }}</span>
-                  <span v-if="ingredient.ingredients.data.unit != null" class="ml-2">{{ ingredient.ingredients.data.unit[0].text }}</span>
-                  <span class="ingredient ml-2">{{ ingredient.ingredients.data.name[0].text }}</span>
+                    <span>{{ ingredient.ingredients.data.quantity }}</span>
+                    <span v-if="ingredient.ingredients.data.hasOwnProperty('unit')" class="ml-2">{{ ingredient.ingredients.data.unit[0].text }}</span>
+                    <span class="ingredient ml-2">{{ ingredient.ingredients.data.name[0].text }}</span>
                 </li>
               </ul>
             </div>
@@ -56,10 +56,11 @@ import EventBus from "@/main";
 
 export default {
   name: "Recipe",
-  props: ['uid', 'recipe'],
+  props: ['uid'],
   data: function() {
     return {
       navHeightCssProperty: '',
+      recipe: null
     }
   },
   computed: {
@@ -73,8 +74,6 @@ export default {
     getRecipe: function (uid) {
       this.$prismic.client.getByUID('recipe', uid, { fetchLinks: ['ingredient.name', 'ingredient.quantity', 'ingredient.unit'] }).then((response) => {
         this.recipe = response;
-
-        console.log(response);
       });
     }
   },

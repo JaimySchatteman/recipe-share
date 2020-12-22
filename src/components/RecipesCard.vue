@@ -1,5 +1,5 @@
 <template>
-  <router-link :to="{name: 'detail', params: {uid: recipe.uid, recipe: recipe}}" tag="div" class="recipe-card">
+  <router-link :to="{name: 'detail', params: {uid: recipe.uid}}" tag="div" class="recipe-card">
     <img :src="recipe.data.image.url" :alt="recipe.data.image.alt" class="w-full">
     <div class="px-6 pb-8">
       <h1 class="mt-4">{{ recipe.data.name[0].text }}</h1>

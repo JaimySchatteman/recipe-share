@@ -28,9 +28,7 @@ export default {
       this.$prismic.client.query(
           this.$prismic.Predicates.at('document.type', 'recipe')
       ).then((data) => {
-        console.log(data);
         data.results.forEach((recipe) => {
-          console.log(recipe);
           this.recipes.push(recipe);
         });
     });
