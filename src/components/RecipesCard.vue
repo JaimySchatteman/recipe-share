@@ -1,8 +1,8 @@
 <template>
   <router-link :to="{name: 'detail', params: {uid: recipe.uid}}" tag="div" class="recipe-card">
     <img :src="recipe.data.image.url" :alt="recipe.data.image.alt" class="w-full">
-    <div class="px-6 pb-8">
-      <h1 class="mt-4">{{ recipe.data.name[0].text }}</h1>
+    <div class="px-7 pt-6 pb-7">
+      <h1 class="text-xl sm:text-2xl">{{ recipe.data.name[0].text }}</h1>
     </div>
   </router-link>
 </template>
@@ -17,7 +17,6 @@ export default {
 <style scoped>
 h1 {
   color: #165412;
-  font-size: 1.5rem;
   font-weight: 700;
   white-space: nowrap;
   overflow: hidden;

@@ -28,7 +28,7 @@ export default {
 <style scoped>
 
 div.header {
-  background-color: #F2FFEC;
+  background-color: #fff;
   box-shadow: 5px 0 15px rgba(50, 50, 0, 0.1);
 
 }

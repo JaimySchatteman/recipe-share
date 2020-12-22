@@ -1,7 +1,7 @@
 <template>
   <div v-if="recipe != null" class="recipe flex flex-col" :style="cssVars">
     <img :src="recipe.data.image.url" :alt="recipe.data.image.alt" class="background-image h-full">
-    <div class="recipe-information -mt-8 md:-mt-16 lg:-mt-20 xl:-mt-32 mx-8 md:mx-16 lg:mx-24 xl:mx-42 2xl:mx-60 px-8 sm:px-12 py-10">
+    <div class="recipe-information -mt-8 md:-mt-24 lg:-mt-32 xl:-mt-42 md:mx-16 lg:mx-24 xl:mx-42 2xl:mx-60 px-8 sm:px-12 py-10">
         <h1 class="text-4xl">{{ recipe.data.name[0].text }}</h1>
         <div class="grid grid-cols-1 md:grid-cols-3 mt-2 md:mt-8">
 
@@ -98,6 +98,14 @@ export default {
     height: calc(100vh - var(--height));
   }
 }
+
+@media(max-width: 768px) {
+  .background-image {
+    object-fit: cover;
+    max-height: calc(100vh / 3);
+  }
+}
+
 
 .background-image {
   object-fit: cover;
