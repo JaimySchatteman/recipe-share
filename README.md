@@ -1,5 +1,4 @@
-# recipe-share_in-the-pocket
-
+# recipe-share
 ## Project setup
 ```
 npm install
