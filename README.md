@@ -1,4 +1,8 @@
 # recipe-share
+
+*Challenge*: Code a small app in 1 day while learing to use Prismic CMS
+
+
 ## Project setup
 ```
 npm install
